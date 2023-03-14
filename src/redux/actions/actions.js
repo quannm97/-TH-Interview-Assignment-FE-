@@ -1,8 +1,8 @@
 import * as types from './actionTypes.js';
 
-export const setUserList = (users) =>{
+export const setUser = (users) =>{
     return{
-        type: types.SET_USER_LIST,
+        type: types.SET_USER,
         payload : users
     };
 }
