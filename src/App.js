@@ -11,6 +11,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [recordsPerPage] = useState(10);
 
+  //make sure component only get data 1 time only with useRef
   const effectRan = useRef(false);
   useEffect(() => {
     if (effectRan.current === false) {
