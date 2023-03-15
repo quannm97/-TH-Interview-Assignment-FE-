@@ -3,7 +3,7 @@ import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <dive className={styles.footerCustom}>
+    <div className={styles.footerCustom}>
       <h2>CONTACT</h2>
 
       <ul>
@@ -17,10 +17,10 @@ const Footer = () => {
           <i className="fas fa-mobile-alt"></i>+84 977 272 872
         </li>
         <li>
-        <i class="fab fa-github"></i><a href="https://github.com/quannm97/-TH-Interview-Assignment-FE-">Github</a>
+        <i className="fab fa-github"></i><a href="https://github.com/quannm97/-TH-Interview-Assignment-FE-">Github</a>
         </li>
       </ul>
-    </dive>
+    </div>
   );
 };
 

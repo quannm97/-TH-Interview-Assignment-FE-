@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 function App() {
 
     const [data, setData] = useState([]);
-    // const [loading, setLoading] = useState(true);
+    
     const [currentPage, setCurrentPage] = useState(1);
     const [recordsPerPage] = useState(10);
 
@@ -17,8 +17,10 @@ function App() {
       if(effectRan.current===false)
         {axios.get(`https://randomuser.me/api/?page=3&results=100`)
             .then(res => {
-                    setData(res.data.results);
-                    // setLoading(false);
+                const softedData = res.data.results;
+                softedData.sort((a,b)=> a.name.first.localeCompare(b.name.first))
+                    setData(softedData);
+                    
                 })
                 .catch(() => {
                     alert('There was an error while retrieving the data')
