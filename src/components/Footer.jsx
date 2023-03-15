@@ -17,7 +17,10 @@ const Footer = () => {
           <i className="fas fa-mobile-alt"></i>+84 977 272 872
         </li>
         <li>
-        <i className="fab fa-github"></i><a href="https://github.com/quannm97/-TH-Interview-Assignment-FE-">Github</a>
+          <i className="fab fa-github"></i>
+          <a href="https://github.com/quannm97/-TH-Interview-Assignment-FE-">
+            Github
+          </a>
         </li>
       </ul>
     </div>
