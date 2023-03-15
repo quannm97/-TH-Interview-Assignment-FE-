@@ -17,6 +17,7 @@ function App() {
       axios
         .get(`https://randomuser.me/api/?page=3&results=100`)
         .then((res) => {
+            //sort data with localeCompare
           const softedData = res.data.results;
           softedData.sort((a, b) => a.name.first.localeCompare(b.name.first));
           setData(softedData);
@@ -30,9 +31,9 @@ function App() {
     };
   }, []);
 
-  const indexOfLastRecord = currentPage * recordsPerPage;
-  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
-  const currentRecords = data.slice(indexOfFirstRecord, indexOfLastRecord);
+  const indexOfLastRecord = currentPage * recordsPerPage;//last user of page
+  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;//first user of page
+  const currentRecords = data.slice(indexOfFirstRecord, indexOfLastRecord);//slice users array
   const nPages = Math.ceil(data.length / recordsPerPage);
 
   return (

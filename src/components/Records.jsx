@@ -1,6 +1,6 @@
 import React from "react";
 import "./Records.scss";
-const Records = ({ data, sortOrder }) => {
+const Records = ({ data }) => {
   return (
     <table className="table customTable">
       <thead>
