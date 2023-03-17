@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
-
+    //Pagination page number logic
     const pageNumbers = [...Array(nPages + 1).keys()].slice(1)
 
     

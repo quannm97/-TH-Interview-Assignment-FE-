@@ -40,13 +40,13 @@ function App() {
   return (
     <div className="container mt-5 customContainer">
       <h2>Pagination </h2>
-      <Records data={currentRecords}></Records>
+      <Records data={currentRecords}/>
       <Pagination
         nPages={nPages}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 }
